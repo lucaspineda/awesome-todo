@@ -22,13 +22,11 @@
     <q-footer>
       <q-tabs>
         <q-route-tab
-          to="/"
-          icon="list"
-          label="Todo" />
-        <q-route-tab
-          to="/settings"
-          icon="settings"
-          label="Settings" />
+          v-for="item in essentialLinks" 
+          :key="item.title"
+          :to="item.link"
+          :icon="item.icon"
+          :label="item.title" />
       </q-tabs>
     </q-footer>
 
