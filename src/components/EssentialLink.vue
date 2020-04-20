@@ -46,7 +46,9 @@ export default {
 }
 </script>
 <style lang="scss">
-  .q-drawer .q-router-link--exact-active {
+  .q-drawer {
+   .q-router-link--exact-active {
     color: white !important;
+  } 
   }
 </style>
