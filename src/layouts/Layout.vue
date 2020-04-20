@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh lpR fFf">
     <q-header elevated>
       <q-toolbar>
         <q-btn
@@ -14,8 +14,7 @@
         <q-toolbar-title>
           Quasar App
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        
       </q-toolbar>
     </q-header>
 
@@ -31,8 +30,8 @@
     </q-footer>
 
     <q-drawer
+      :breakpoint="767"
       v-model="leftDrawerOpen"
-      show-if-above
       bordered
       content-class="bg-grey-1"
     >
@@ -86,3 +85,10 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  @media screen and (min-width: 768px) {
+    .q-footer {
+      display: none;
+    }
+  }
+</style>
