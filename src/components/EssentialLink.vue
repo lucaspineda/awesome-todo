@@ -4,6 +4,7 @@
     clickable
     tag="a"
     :to="link"
+    class="text-grey-4"
   >
     <q-item-section
       v-if="icon"
@@ -44,3 +45,8 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .q-drawer .q-router-link--exact-active {
+    color: white !important;
+  }
+</style>

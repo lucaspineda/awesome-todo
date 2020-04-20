@@ -2,19 +2,10 @@
   <q-layout view="hHh lpR fFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
-
-        <q-toolbar-title>
-          Quasar App
+        <q-toolbar-title class="absolute-center">
+          Awesome Todo
         </q-toolbar-title>
-        
+
       </q-toolbar>
     </q-header>
 
@@ -31,14 +22,15 @@
 
     <q-drawer
       :breakpoint="767"
+      :width="250"
       v-model="leftDrawerOpen"
       bordered
-      content-class="bg-grey-1"
+      content-class="bg-primary"
     >
-      <q-list>
+      <q-list dark>
         <q-item-label
           header
-          class="text-grey-8"
+          class="text-grey-4"
         >
           Navigation
         </q-item-label>
@@ -68,7 +60,7 @@ export default {
 
   data () {
     return {
-      leftDrawerOpen: false,
+      leftDrawerOpen: true,
       essentialLinks: [
         {
           title: 'Todo',
