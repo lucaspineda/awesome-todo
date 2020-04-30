@@ -20,15 +20,9 @@
 		      	:rules="[val => !!val || 'Field is required']"
 		      	autofocus
 		      	ref="name"
-		      	label="Task name"
-		      	class="col">
-						<template v-slot:append>
-		          <q-icon
-		          	v-if="taskToSubmit.name"
-		          	@click="taskToSubmit.name = ''"
-		          	name="close"
-		          	class="cursor-pointer" />
-		        </template>
+		      	label="Task names"
+		      	class="col"
+						clearable>
 		      </q-input>
 	    	</div>
 
@@ -36,13 +30,9 @@
 		      <q-input
 		      	outlined
 		      	label="Due date"
-		      	v-model="taskToSubmit.dueDate">
+		      	v-model="taskToSubmit.dueDate"
+						clearable>
 		        <template v-slot:append>
-		          <q-icon
-		          	v-if="taskToSubmit.dueDate"
-		          	@click="clearDueDate"
-		          	name="close"
-		          	class="cursor-pointer" />
 		          <q-icon name="event" class="cursor-pointer">
 		            <q-popup-proxy>
 		              <q-date v-model="taskToSubmit.dueDate" />
