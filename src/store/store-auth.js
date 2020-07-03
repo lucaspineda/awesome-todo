@@ -14,7 +14,7 @@ const mutations = {
 
 const actions = {
 	registerUser({}, payload) {
-		// Loading.show()
+		Loading.show()
 		firebaseAuth.createUserWithEmailAndPassword(payload.email, payload.password)
 			.then(response => {
 				console.log('response: ', response)
@@ -24,7 +24,7 @@ const actions = {
 			})
 	},
 	loginUser({}, payload) {
-		// Loading.show()
+		Loading.show()
 		firebaseAuth.signInWithEmailAndPassword(payload.email, payload.password)
 			.then(response => {
 				console.log('response: ', response)
