@@ -24,7 +24,8 @@ const state = {
 		// }
 	},
 	search: '',
-	sort: 'name'
+	sort: 'name',
+	tasksDownloaded: false
 }
 
 const mutations = {
@@ -42,7 +43,10 @@ const mutations = {
 	},
 	setSort(state, value) {
 		state.sort = value
-	}
+	},
+	setTasksDownloaded(state, value) {
+		state.tasksDownloaded = value
+	}	
 }
 
 const actions = {
@@ -70,6 +74,11 @@ const actions = {
 	fbReadData({ commit }) {
 		let userId = firebaseAuth.currentUser.uid
 		let userTasks = firebaseDb.ref('tasks/' + userId)
+
+		// initial check for data
+		userTasks.once('value', snapshop => {
+			commit('setTasksDownloaded', true)
+		})
 
 		// child added
 		userTasks.on('child_added', snapshot => {
