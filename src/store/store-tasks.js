@@ -38,6 +38,9 @@ const mutations = {
 	addTask(state, payload) {
 		Vue.set(state.tasks, payload.id, payload.task)
 	},
+	clearTasks(state) {
+		state.tasks = {}
+	},
 	setSearch(state, value) {
 		state.search = value
 	},
@@ -78,6 +81,8 @@ const actions = {
 		// initial check for data
 		userTasks.once('value', snapshop => {
 			commit('setTasksDownloaded', true)
+		}, error => {
+			console.log('error.message: ', error.message)
 		})
 
 		// child added
