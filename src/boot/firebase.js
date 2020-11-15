@@ -13,7 +13,7 @@ var firebaseConfig = {
   messagingSenderId: "301737886693",
   appId: "1:301737886693:web:eb1f9d7e3cdb693aac650c",
   measurementId: "G-M98KB9JTHQ"
-}
+};
 
 let firebaseApp = firebase.initializeApp(firebaseConfig)
 let firebaseAuth = firebaseApp.auth()
