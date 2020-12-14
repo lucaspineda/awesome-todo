@@ -56,7 +56,8 @@ module.exports = function (/* ctx */) {
       plugins: [
         'Dialog',
         'LocalStorage',
-        'SessionStorage'
+        'SessionStorage',
+        'Notify'
       ]
     },
 
