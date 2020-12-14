@@ -7,7 +7,7 @@
 		<div>
 			<list-header
 				v-if="!settings.showTasksInOneList"
-				bgColor="bg-orange-4"
+				:style="`background-color: ${settings.taskNotCompletedColor}`"
 				>Todo</list-header>
 
 			<q-list 
