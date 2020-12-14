@@ -1,8 +1,8 @@
 {
   "name": "awesome-todo",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "description": "A todo list app",
+  "productName": "Awesome Todo",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "lucas7796 <lucas.pineda@hotmail.com>",
