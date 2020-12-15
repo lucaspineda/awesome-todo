@@ -77,7 +77,7 @@ Use the settings to customize the app. There you can change the date format, cha
 <!-- GETTING STARTED -->
 ## Getting Started
 
-The project is hosted in a netlify server at https://brave-kirch-83e7f4.netlify.app/
+The project is hosted in a Vercel server at https://awesome-todo-a2i68ncz8.vercel.app
 
 However if you want to run it locally here are some instructions:
 
@@ -87,6 +87,8 @@ However if you want to run it locally here are some instructions:
   ```sh
   npm install npm@latest -g
   ```
+
+* Or Yarn
 
 ### Installation
 
@@ -100,7 +102,7 @@ However if you want to run it locally here are some instructions:
    ```
 3. Start the local server
    ```sh
-   npm run serve
+   npm run dev
    ```
 
 
@@ -108,16 +110,20 @@ However if you want to run it locally here are some instructions:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-- To start using the app and buy some stocks go to the `Portfolio` tab and choose some stocks to buy.
+- To start using the app and start creating tasks register your email (you can just use a fake email to test it).
 
-- Click in `End Day` to simulate the end of a day and check that your stocks prices has changed.
+- Click on the add button to add some task, then click on the checkbox if you're done with it.
 
-- To sell them go to the `Portfolio` tab.
+- You can uncheck it if you aren't done with a task too.
+
+- Go to the Settings tab to change some settings. There you can change the date format, change list colors and other options.
+
+- Every task you create is saved in Firebase with your email account.
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-This is just a learning purpose project, but if you want to add some more cool feature you're very welcome.
+This is a starter project and has a lot to improve. If you want to add some more cool feature you're very welcome.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -137,32 +143,7 @@ Project Link: [https://github.com/lucaspineda/awesome-todo](https://github.com/l
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/lucaspineda/awesome-todo/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/lucas-pineda
-[product-screenshot]: public/img/stock-trader-gif.gif
-
-
-# Quasar App (awesome-todo)
-
-A Quasar Framework app
-
-## Install the dependencies
-```bash
-npm install
-```
-
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
-
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+[product-screenshot]: src/assets/awesome-todo-demo.gif
